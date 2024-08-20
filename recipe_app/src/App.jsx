@@ -4,15 +4,17 @@ import "./App.css";
 import Home from "./Components/Home";
 import Favorites from "./Components/Favorites";
 import Search from "./Components/Search";
+import Details from './Components/Details';
 
 function App() {
   return (
     <>
       <Search />
-   <div className="container mx-auto">
+      <div className="container mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/favorites" element={<Favorites />} />
+          <Route path='/details/:id' element={<Details />} />
+          <Route path="/favourites" element={<Favorites />} />
         </Routes>
       </div>
     </>
